@@ -1,0 +1,8 @@
+<p>search</p>
+<label for="title">Add ToDo</label>
+<input type="text" id="title" #addInput (keyup.enter)="addTodo(addInput.value)" />
+<hr />
+
+<div *ngIf="todos">
+  <app-todo *ngFor="let todo of todos | async" [todo]="todo" (onEdit)="openEdit($event)" (onDelete)="delete($event)"></app-todo>
+</div>

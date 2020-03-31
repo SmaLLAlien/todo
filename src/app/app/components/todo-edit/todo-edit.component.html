@@ -1,0 +1,5 @@
+<h2>Edit</h2>
+<label for="title">Title</label>
+<input type="text" id="title" [formControl]="title" />
+<button (click)="save()">Save</button>
+<button [routerLink]="['/todo-list']">Cancel</button>
