@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.add {
+  box-sizing: border-box;
+  width: 20%;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.todos {
+  width: 20%;
+}
+
+@media screen and (max-width: 1200px){
+  .add,
+  .todos {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px){
+  .add,
+  .todos {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .add,
+  .todos {
+    width: 100%;
+  }
+}

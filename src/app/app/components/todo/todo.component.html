@@ -1,6 +1,6 @@
-<div class="wrapper">
-  <div (click)="edit(todo)">
+<div class="todo">
+  <div (click)="edit(todo)" class="todo__title">
     {{ todo.title }}
   </div>
-  <span (click)="delete(todo)">x</span>
+  <div (click)="delete(todo)" class="todo__close">x</div>
 </div>

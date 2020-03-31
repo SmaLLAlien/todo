@@ -23,12 +23,14 @@ export class TodosComponent implements OnInit {
   }
 
   addTodo(addInput: string) {
-    const todo = {title: addInput};
-    this.todos = this.todoService.addTodo(todo).pipe(
-      switchMap(() => this.getTodos())
-    );
+    if (addInput.trim()) {
+      const todo = {title: addInput};
+      this.todos = this.todoService.addTodo(todo).pipe(
+        switchMap(() => this.getTodos())
+      );
 
-    this.input.nativeElement.value = '';
+      this.input.nativeElement.value = '';
+    }
   }
 
   getTodos(): Observable<TODO[]> {
