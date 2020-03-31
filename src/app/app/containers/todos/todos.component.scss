@@ -15,6 +15,12 @@
   border-radius: 5px;
   outline: none;
   padding-left: 10px;
+  transition: 0.3s all;
+}
+
+.add:focus {
+  border-left: 5px solid green;
+  transition: 0.3s all;
 }
 
 .todos {

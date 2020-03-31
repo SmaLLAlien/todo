@@ -46,6 +46,12 @@
   &__cancel {
     background: #dc3545;
   }
+
+  &__save:hover,
+  &__cancel:hover {
+    color: #fff;
+    transition: 0.3s all;
+  }
 }
 
 @media screen and (max-width: 960px){
