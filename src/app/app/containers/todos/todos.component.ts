@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, OnInit, ViewChild} from '@angular/core';
 import {TODO} from '../../../core/todo-model';
 import {TodoService} from '../../todo.service';
 import {Router} from '@angular/router';
@@ -37,8 +37,10 @@ export class TodosComponent implements OnInit {
     return this.todoService.getTodos().pipe(
       map((obj) => {
         const tempTodos = [];
-        const keys = Object.keys((obj));
-        keys.forEach(key => tempTodos.push({...obj[key], id: key}));
+        if (obj) {
+          const keys = Object.keys((obj));
+          keys.forEach(key => tempTodos.push({...obj[key], id: key}));
+        }
         return tempTodos;
       }),
       map(todos => {

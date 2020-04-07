@@ -7,7 +7,8 @@
          placeholder="press enter to add" />
   <hr />
 
-  <div *ngIf="todos" class="todos">
-    <app-todo *ngFor="let todo of todos | async" [todo]="todo" (onEdit)="openEdit($event)" (onDelete)="delete($event)"></app-todo>
+  <div *ngIf="todos | async as todosArray" class="todos">
+    <app-todo *ngFor="let todo of todosArray" [todo]="todo" (onEdit)="openEdit($event)" (onDelete)="delete($event)" class="test"></app-todo>
   </div>
+
 </div>

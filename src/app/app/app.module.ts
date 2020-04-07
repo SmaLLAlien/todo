@@ -12,6 +12,7 @@ import {TodoService} from './todo.service';
 import {TodoApiService} from '../core/todo-api.service';
 import { TodosComponent } from './containers/todos/todos.component';
 import { EditComponent } from './containers/edit/edit.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EditComponent } from './containers/edit/edit.component';
   imports: [
     CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule
