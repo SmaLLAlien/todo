@@ -1,6 +1,0 @@
-<div *ngIf="todo"  class="todo" [@in] = "state" (@in.done) = "onAnimationEvent($event)">
-  <div (click)="edit(todo)" class="todo__title">
-    {{ todo.title }}
-  </div>
-  <div (click)="delete(todo)" class="todo__close">x</div>
-</div>
